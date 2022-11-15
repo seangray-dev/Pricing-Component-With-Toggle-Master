@@ -1,0 +1,237 @@
+*, *::before, *::after {
+    box-sizing: border-box; 
+} 
+
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(232, 13%, 33%);
+    background-color: hsl(240, 78%, 98%);
+    background-image: url(./images/bg-top.svg);
+    background-position: 200px 0px;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+} 
+
+img {
+    max-width: 100%;
+}
+
+/* Toggle Switch */
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.toggle-switch label {
+    background: 
+        linear-gradient(
+        to right, #a3a8f0,#696fdd
+        );
+    border-radius: 50px;
+    display: inline-block;
+    height: 30px;
+    width: 55px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-ball {
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    transition: transform 0.3s;
+}
+
+.toggle-switch input {
+    position: absolute;
+    left: -9999px;
+}
+
+.toggle-switch input:checked + label .toggle-ball {
+    /* left: auto; 
+    right: 2.5px; */
+    transform: translateX(25px);
+}
+
+/* JavaScript Changes */
+
+.card .monthly {
+    display: none;
+}
+
+.show-monthly .card .monthly {
+    display: block;
+}
+
+.show-monthly .card .annually {
+    display: none;
+}
+
+/* Typography */
+
+.title {
+    color: hsl(233, 13%, 49%);
+}
+
+.plan-type {  
+    color: hsl(234, 14%, 74%);
+}
+
+.package-price {
+    font-size: 3.5rem;
+}
+
+.primary {
+    color: white;
+}
+
+/* Layout */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.plan-type {
+    display: inline-flex;
+}
+
+.packages {
+    max-width: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    box-shadow: 0 5px 10px rgba(0,0, 0, 0.1);
+}
+
+.package-title {
+    margin: 1.5em 0;
+}
+
+.card.primary {
+    background: linear-gradient(
+        to right, #a3a8f0,#696fdd
+    );
+}
+
+.package-price {
+    margin: 0 0 .5em 0;
+}
+
+.package-info {
+    border-top: 1px solid hsl(234, 14%, 74%);
+    padding: 1em 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.card p:nth-child(5) {
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.btn {
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 3em auto;
+    width: 80%;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(
+        to right,#a3a8f0,#696fdd
+    );
+    padding: 1em .5em;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: all .3s ease-in-out;
+}
+
+.btn:focus,
+.btn:hover {
+    background: white;
+    color: #696fdd;
+    border: 1px solid #696fdd;
+}
+
+.btn.primary {
+    background: white;
+    color: #696fdd;
+    border: 1px solid white;
+}
+
+.btn.primary:focus,
+.btn.primary:hover {
+    color: white;
+    border: 1px solid white;
+    background: none ;
+}
+
+@media (min-width: 768px) {
+    body {
+    background-image: 
+    url(./images/bg-top.svg),
+    url(./images/bg-bottom.svg);
+    background-position: 
+    top right,
+    bottom left;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .header {
+        margin: 5em 0;
+    }
+
+    .packages {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: 1050px;
+        width: 90%;
+    }
+
+    .card {
+        max-width: 350px;
+        padding: 0 1em;
+    }
+
+    .card.primary {
+        transform: scale(110%);
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
